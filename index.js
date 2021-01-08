@@ -1,7 +1,60 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = ["What is your Github username", "What is your email address", 
+"What is your project's name", "Please write a short description of your project",
+"What kind of license should your project have?", 
+"What command should be run to install dependencies?", "What command should be run to run tests", 
+"What does the user need to know about using the repo?", 
+"What does the user need to know about contributing to the repo?"]
+    
+inquirer
+.prompt([
+    {
+        type: "input",
+        message: "What is your Github username?",
+        name: "username"
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "Email"
+    },
+    {
+        type: "input",
+        message: "What is your project's name?",
+        name: "Project Name"
+    },
+    {
+        type: "input",
+        message: "Please write a short description of your project.",
+        name: "Description"
+    },
+    {
+        type: "list",
+        message: "What type of license should your project have?",
+        name: "license",
+        choices: ["MIT", "GNU", "Creative Commons", "BSD"]
+    },
+    {
+        type: "input",
+        message: "What command should be run to run tests?",
+        name: "Command"
+    },
+    {
+        type: "input",
+        message: "What does the user need to know about using the repo?",
+        name: "Usage"
+    },
+    {
+        type: "input",
+        name: "what does the user need to know about contributing to the repo?",
+        name: "Contributions"
+    }
+])
+.then((response) =>
+    console.log("You Got It Dude!")
+);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
