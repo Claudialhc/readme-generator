@@ -17,7 +17,6 @@ function generateMarkdown(data) {
   return `# ${data.projectName}
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
-![GitHub contributors](https://img.shields.io/github/contributors/scottydocs/README-template.md)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -29,8 +28,7 @@ function generateMarkdown(data) {
     <li>
       <a href="#prerequisites">Prerequisites</a>
     </li>
-    <li><a href="#using">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
   </ol>
@@ -42,7 +40,7 @@ ${data.description}
 
 Before you begin, ensure you have met the following requirements:
 
-## Using ${data.projectName}
+## Usage ${data.projectName}
 
 To use ${data.projectName}, follow these steps: ${data.usage}
  
