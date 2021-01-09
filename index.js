@@ -1,12 +1,7 @@
-// TODO: Include packages needed for this application
+
 const inquirer = require("inquirer");
-// TODO: Create an array of questions for user input
-const questions = ["What is your Github username", "What is your email address", 
-"What is your project's name", "Please write a short description of your project",
-"What kind of license should your project have?", 
-"What command should be run to install dependencies?", "What command should be run to run tests", 
-"What does the user need to know about using the repo?", 
-"What does the user need to know about contributing to the repo?"]
+const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown.js");
     
 inquirer
 .prompt([
@@ -18,17 +13,17 @@ inquirer
     {
         type: "input",
         message: "What is your email address?",
-        name: "Email"
+        name: "email"
     },
     {
         type: "input",
         message: "What is your project's name?",
-        name: "Project Name"
+        name: "projectName"
     },
     {
         type: "input",
         message: "Please write a short description of your project.",
-        name: "Description"
+        name: "description"
     },
     {
         type: "list",
@@ -39,40 +34,22 @@ inquirer
     {
         type: "input",
         message: "What command should be run to run tests?",
-        name: "Command"
+        name: "command"
     },
     {
         type: "input",
         message: "What does the user need to know about using the repo?",
-        name: "Usage"
+        name: "usage"
     },
     {
         type: "input",
-        name: "what does the user need to know about contributing to the repo?",
-        name: "Contributions"
+        message: "what does the user need to know about contributing to the repo?",
+        name: "contribution"
     }
 ])
-.then((response) =>
-    console.log("You Got It Dude!")
-);
+.then(data => {
+    fs.writeFile(`sampleREADME.md`, generateMarkdown(data), (err) => err ? console.error(err) : console.log('Success!'));
+}) .catch(err => {
+    console.log(err);
+});
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
-
-
-// ## have done before
-// - use fs module to create readme file
-// - use template literals to inesrt user input into readme string
-// - reference good readme for a template
-// ## need to learn
-// - use inquirer package to get user input (thursday)
-// - create a .gitignore file (on your own/office hours)
-// - create package.json file (thursday)
-// - how to make a video that captures screen and voice (on your own/pre-work)
-// - learn what a badge is and how to render one in markdown (on your own/office hours)
