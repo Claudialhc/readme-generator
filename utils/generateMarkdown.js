@@ -40,7 +40,7 @@ ${data.description}
 
 Before you begin, ensure you have met the following requirements:
 
-## Usage ${data.projectName}
+## Usage
 
 To use ${data.projectName}, follow these steps: ${data.usage}
  
