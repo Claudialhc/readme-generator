@@ -1,50 +1,21 @@
 # README.md Generator
+This template is the for a README.md Generator app created using node.js. 
+This generator was created to make it easy for users to create fast and quality README.md's.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/scottydocs/README-template.md)
+When creating the generator the user will be asked a variety of questions that will be used to populate the final README.md. The questions include name of project, your GitHub username and which license you want to use, among other questions. 
+the questions were prompted using the code below:
+```js
+inquirer
+.prompt([
+    {
+        type: "input",
+        message: "What is your Github username?",
+        name: "username"
+    },
+```
+The example above only shows one example, you can see the rest either on the js file or one the video demo.
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#description">Description</a>
-    </li>
-    <li>
-      <a href="#prerequisites">Prerequisites</a>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+After the user inputs their requirement on the terminal, a readme file will be added to their projects files that will have a README with their answers populated. 
 
-## Description
-This is a README.md Generator. This generator was created to make it easy for users to create fast and quality README.md's
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-## Usage README.md Generator
-
-To use README.md Generator, follow these steps: npm
- 
-Command to run test: npm
-
-## Contributing to README.md Generator
-
-To contribute to README.md Generator, follow these steps: 
--
-
-## Contact
-
-If you want to contact me you can reach me at claudiahdez13@gmail.com.
-You can also go to my GitHub accout to view projects, look me up as Claudialhc!
-
-## License
-MIT
-
-This project uses the following license: [MIT](https//license.com).
-
-<!-- This template is the template for a README.md Generator
-  <a href= "https://drive.google.com/file/d/1VJw22NWjyxhJwXLUv0JTf4EpueAvq_ld/view">README.md Generator </a> Video Demo.
--->
+Below you will find the link to the README.md Generator demo where you can watch how it works.
+  <a href= "https://drive.google.com/file/d/1hHv1PCLZNitYTejy8putR2sjuO9g-xdr/view">README.md Generator </a> Video Demo.

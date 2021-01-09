@@ -24,11 +24,11 @@ This is a README.md Generator. This generator was created to make it easy for us
 
 Before you begin, ensure you have met the following requirements:
 
-## Usage README.md Generator
+## Usage
 
-To use README.md Generator, follow these steps: npm
+To use README.md Generator, follow these steps: npn
  
-Command to run test: npm
+Command to run test: npn
 
 ## Contributing to README.md Generator
 
